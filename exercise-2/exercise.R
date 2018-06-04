@@ -10,12 +10,11 @@ library(ggplot2)
 
 ## Statistical Transformations
 
-# Draw a bar chart of the diamonds data, organized by cut
-# Each bar's height is based on the "count" (number) of diamonds with that cut
+# Use the `stat_count` to create a bar chart of the "count" of diamonds by cut. 
+# You do not need a separate geometry layer!
 
 
-# Use the `stat_count` to apply the statistical transformation "count" to the 
-# diamonds by cut. You do not need a separate geometry layer!
+# Now use bar geometry to draw a bar chart of the "count" of diamonds by cut.
 
 
 # Use the `stat_summary` function to draw a chart with a summary layer.
@@ -27,7 +26,7 @@ library(ggplot2)
 
 ## Position Adjustments
 
-# Draw a bar chart of diamonds organized by cut, with each bar filled by clarity.
+# Draw a bar chart of diamonds counts by cut, with each bar filled by clarity.
 # You should see a _stacked_ bar chart.
 
 
