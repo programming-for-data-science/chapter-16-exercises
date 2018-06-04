@@ -1,8 +1,8 @@
 # Exercise 3: mapping with ggplot2
 
 # Install and load `ggplot2` and `dplyr`
-library(ggplot2)
-library(dplyr)
+library("ggplot2")
+library("dplyr")
 
 # Also install and load the `maps` package, which contains geometry for a number
 # of pre-defined maps.

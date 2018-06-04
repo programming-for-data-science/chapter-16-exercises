@@ -2,7 +2,7 @@
 
 # Install and load the `ggplot2` package
 #install.packages('ggplot2')
-library(ggplot2)
+library("ggplot2")
 
 # For this exercise you will again be working with the `diamonds` data set.
 # Use `?diamonds` to review details about this data set
