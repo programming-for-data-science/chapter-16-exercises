@@ -82,15 +82,6 @@ ggplot(data = diamonds_sample) +
 ggplot(data = diamonds_sample) +
   geom_col(mapping = aes(x = cut, y = price, fill = clarity))
 
-# Draw a histogram (using histogram geometry) of diamond prices.
-# Try mapping each bar based on clarity as well!
-ggplot(data = diamonds_sample) +
-  geom_histogram(mapping = aes(x = price, fill = clarity))
-
-# (For a more traditional "bell-curve", make a histogram of diamond `depth`)
-ggplot(data = diamonds_sample) +
-  geom_histogram(mapping = aes(x = depth, fill = clarity))
-
 
 # Draw a plot of the `diamonds_sample` data (price by carat), with both points 
 # for each diamond AND smoothed lines for each cut (hint: in a separate color)
