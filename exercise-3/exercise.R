@@ -30,21 +30,21 @@ ggplot(data = counties_map) +
 ### Data Wrangling
 
 # Read in the provided election data file (.csv)
-# BE SURE TO SET YOUR WORKING DIRECTORY!
+## BE SURE TO SET YOUR WORKING DIRECTORY!
 election <- read.csv('data/2016_US_County_Level_Presidential_Results.csv', stringsAsFactors=FALSE)
 
 # Inspect the `election` data frame to understand the data you're working with
 colnames(election)
 View(election)
 
-# Consider: what column contains state names? What column contains county names? 
-# What format are those county names in?
+## Consider: what column contains state names? What column contains county names? 
+## What format are those county names in?
 
-# The format for the states and and counties are different, so you need some way
-# to match the election data to the map data in order to produce the map.
-# The `election` data does have FIPS codes (https://en.wikipedia.org/wiki/FIPS_county_code) 
-# which you can use for this. And a data frame that links FIPS to the state and 
-# county names is available from the `maps` library!
+## The format for the states and and counties are different, so you need some way
+## to match the election data to the map data in order to produce the map.
+## The `election` data does have FIPS codes (https://en.wikipedia.org/wiki/FIPS_county_code) 
+## which you can use for this. And a data frame that links FIPS to the state and 
+## county names is available from the `maps` library!
 
 # Use `data()` to load the `"county.fips"` data frame from the `maps` library
 data("county.fips")
