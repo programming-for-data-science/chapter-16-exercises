@@ -67,13 +67,6 @@
 # What kind of chart do you get?
 
 
-# Draw a histogram (using histogram geometry) of diamond prices.
-# Try mapping each bar based on clarity as well!
-
-
-# (For a more traditional "bell-curve", make a histogram of diamond `depth`)
-
-
 
 # Draw a plot of the `diamonds_sample` data (price by carat), with both points 
 # for each diamond AND smoothed lines for each cut (hint: in a separate color)
