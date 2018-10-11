@@ -8,51 +8,20 @@ library("ggplot2")
 # Use `?diamonds` to review details about this data set
 ?diamonds
 
-## Statistical Transformations
-
-# Use the `stat_count` to create a bar chart of the "count" of diamonds by cut.
-# You do not need a separate geometry layer!
-ggplot(data = diamonds) +
-  stat_count(mapping = aes(x = cut))
-
-# Now use bar geometry to draw a bar chart of the "count" of diamonds by cut.
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut))
-
-# Draw a histogram (using histogram geometry) of diamond prices.
-# Try mapping each bar based on clarity as well!
-ggplot(data = diamonds_sample) +
-  geom_histogram(mapping = aes(x = price, fill = clarity))
-
-# (For a more traditional "bell-curve", make a histogram of diamond `depth`)
-ggplot(data = diamonds_sample) +
-  geom_histogram(mapping = aes(x = depth, fill = clarity))
-
-# Use the `stat_summary` function to draw a chart with a summary layer.
-# Map the x-position to diamond `cut`, and the y-position to diamond `depth`
-# Bonus: use `min` as the function ymin, `max` as the function ymax, and `median`
-# as the function y
-ggplot(data = diamonds) +
-  stat_summary(
-    mapping = aes(x = cut, y = depth),
-    fun.ymin = min, fun.ymax = max, fun.y = median
-  )
-
-
 ## Position Adjustments
 
-# Draw a bar chart of diamonds counts by cut, with each bar filled by clarity.
-# You should see a _stacked_ bar chart.
+# Draw a column (bar) chart of diamonds cuts by price, with each bar filled by 
+# clarity. You should see a _stacked_ bar chart.
 ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = clarity))
+  geom_col(mapping = aes(x = cut, y = price, fill = clarity))
 
 # Draw the same chart again, but with each element positioned to "fill" the y axis
 ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = clarity), position = "fill")
+  geom_col(mapping = aes(x = cut, y = price, fill = clarity), position = "fill")
 
 # Draw the same chart again, but with each element positioned to "dodge" each other
 ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = clarity), position = "dodge")
+  geom_col(mapping = aes(x = cut, y = price, fill = clarity), position = "dodge")
 
 # Draw a plot with point geometry with the x-position mapped to `cut` and the
 # y-position mapped to `clarity`
