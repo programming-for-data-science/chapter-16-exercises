@@ -8,33 +8,10 @@ library("ggplot2")
 # Use `?diamonds` to review details about this data set
 ?diamonds
 
-## Statistical Transformations
-
-# Use the `stat_count` to create a bar chart of the "count" of diamonds by cut. 
-# You do not need a separate geometry layer!
-
-
-# Now use bar geometry to draw a bar chart of the "count" of diamonds by cut.
-
-
-# Draw a histogram (using histogram geometry) of diamond prices.
-# Try mapping each bar based on clarity as well!
-
-
-# (For a more traditional "bell-curve", make a histogram of diamond `depth`)
-
-
-# Use the `stat_summary` function to draw a chart with a summary layer.
-# Map the x-position to diamond `cut`, and the y-position to diamond `depth`
-# Bonus: use `min` as the function ymin, `max` as the function ymax, and `median` 
-# as the function y
-
-
-
 ## Position Adjustments
 
-# Draw a bar chart of diamonds counts by cut, with each bar filled by clarity.
-# You should see a _stacked_ bar chart.
+# Draw a column (bar) chart of diamonds cuts by price, with each bar filled by 
+# clarity. You should see a _stacked_ bar chart.
 
 
 # Draw the same chart again, but with each element positioned to "fill" the y axis
